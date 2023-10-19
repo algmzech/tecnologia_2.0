@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <button type="button" class="btn btn-primary btn-circle" data-toggle="modal" data-target="#exampleModal">
+    Bootstrap
+</button>
+
+<!-- Modal para mostrar el mensaje del botón circular -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Mensaje</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                En el adelanto de esta semana se me propuso usar Bootstrap, por lo cual decidi mejorar la parte de nav, al igual que en la parte inferior de la pagina encontraran un pequeño boton con la interrogante: ¿Qué es?
+                al interactuar con este, mostrara un cuadro indicando que es el deporte, al igual que el que estan leyendo ahora.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+     <link rel="icon" href="#" type="image/x-icon">
+</head>
+    <title>deportes total: la pasion por el juego</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: royalblue;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: darkblue;
+            color: white;
+            text-align: center;
+            padding: 15px 0 5px;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        nav {
+            background-color: black;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .content {
+            margin-top: 20px;
+        }
+
+        aside {
+            background-color: lightgray;
+            padding: 20px;
+        }
+
+        article {
+            background-color: white;
+            color: black;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+
+        th {
+            background-color: darkblue;
+            color: white;
+        }
+
+        ul.stop-motion-list {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            clear: both;
+        }
+
+        .link-descripcion {
+            color: blue;
+        }
+
+        a[href="https://elpais.com/deportes/"] {
+            color: blue;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        .btn-interactive:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos adicionales para el cuadro de información */
+        .info-box {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: left;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="https://www.edx.org/contentful/ii9ehdcj88bc/68ubwsP3OX9cEZrKUiWjzO/1977b14769e3e4135ffc50e442aeba79/Aprende_deportes.jpg?w=509&fm=webp&q=75" alt="Deportes total" width="1000" height="750">
+        <h1 class="display-2">deportes total</h1>
+    </header>
+
+    <nav>
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link" href="#descripcion">Descripción</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#deportes-total-list">deportes total</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#tabla">Tabla</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#personal-info">Información Personal</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container content">
+        <article id="descripcion">
+            <h2>Descripción del Sitio Web</h2>
+            <p>¡Hola atleta! espero que te encuentres de maravilla, bienvenido a DEPORTES TOTAL...</p>
+            <p>Bienvenidos a "Deporte Total," tu fuente de información y pasión por el mundo del deporte. Aquí encontrarás noticias, análisis y cobertura de eventos deportivos de todo el mundo. Nuestro objetivo es mantenerte actualizado sobre tus deportes favoritos y brindarte una perspectiva única sobre lo que sucede dentro y fuera del campo de juego. para mas noticias como esta puedes visitar:
+                <a href="https://elpais.com/deportes/" target="_blank">deportes</a>
+            </p>
+        </article>
+
+        <article>
+            <h3 id="deportes-total-list">Lista de deportes</h3>
+            <ul class="list-group">
+                <li class="list-group-item">basquetball</li>
+                <li class="list-group-item">tennis</li>
+                <li class="list-group-item">futbol</li>
+                <li class="list-group-item">natacion</li>
+                <li class="list-group-item">patinaje</li>
+                <li class="list-group-item">gimnasia</li>
+            </ul>
+        </article>
+
+        <article>
+            <h3 id="tabla">Tabla de información</h3>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>deporte</th>
+                    <th>Horarios</th>
+                    <th>cantidad de noticias</th>
+                </tr>
+                <tr>
+                    <td>basquetball</td>
+                    <td>Lunes y Domingos</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>tennis</td>
+                    <td>Martes</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>futbol</td>
+                    <td>Miercoles y Jueves</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>natacion</td>
+                    <td>Viernes</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>patinaje</td>
+                    <td>Sabado</td>
+                    <td>4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+    </div>
+
+    <aside id="personal-info">
+        <p>Información Personal</p>
+        <p>Nombre: Alejandra Gomez Echeverry</p>
+        <p>Teléfono: 302 5283137</p>
+        <p>Correo Electrónico:  algomezeche1509@gmail.com</p>
+        <p>Institución: Skolmi</p>
+    </aside>
+
+    <div class="container content">
+        <button type="button" class="btn btn-interactive" data-toggle="modal" data-target="#interactiveModal">
+            ¿Qué es?
+        </button>
+
+        <div class="modal fade" id="interactiveModal" tabindex="-1" role="dialog" aria-labelledby="interactiveModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="interactiveModalLabel">Significado del deporte</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        “Deporte” significa todas las formas de actividad física que a través de una participación informal u organizada, tiene por objetivo mejorar el estado físico y mental, formando las relaciones sociales o la obtención de resultados en competición a todos los niveles
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>deportes total: la pasion por el juego</p>
+    </footer>
+</body>
+
+</html>
